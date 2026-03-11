@@ -1,274 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Jasim Waheed | Full Stack Developer</title>
+
+<title>Jasim Khan | Developer</title>
+
+<link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 
-<style>
-/* ===== GLOBAL ===== */
-* {margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body {background:#0f172a;color:#f8fafc;overflow-x:hidden;}
-a {text-decoration:none;color:inherit;}
-button {cursor:pointer;transition:0.3s;}
-
-/* ===== NAVBAR ===== */
-nav {
-  display:flex;justify-content:space-between;align-items:center;
-  padding:15px 30px;position:fixed;width:100%;z-index:100;background:rgba(0,0,0,0.5);
-  backdrop-filter:blur(10px);
-}
-nav h1 {
-  background:linear-gradient(45deg,#00f5ff,#6366f1,#ec4899);
-  -webkit-background-clip:text;
-  background-clip:text;
-  color:transparent;
-  font-size:22px;
-}
-nav ul {display:flex;list-style:none;gap:15px;}
-nav ul li a, nav ul li button {
-  color:#f8fafc;background:transparent;border:none;font-weight:600;padding:6px 12px;border-radius:8px;font-size:14px;
-}
-nav ul li button:hover, nav ul li a:hover {background:#00f5ff;color:#0f172a;}
-
-/* ===== BACKGROUND ANIMATION ===== */
-.bg-animation {
-  position:fixed;width:100%;height:100%;top:0;left:0;z-index:-1;
-  background:radial-gradient(circle at 20% 20%,rgba(0,255,255,0.2),transparent 40%),
-             radial-gradient(circle at 80% 80%,rgba(255,0,255,0.2),transparent 40%);
-  animation:bgMove 15s infinite alternate ease-in-out;
-}
-@keyframes bgMove {0%{transform:scale(1) rotate(0deg);}100%{transform:scale(1.2) rotate(10deg);}}
-
-/* ===== HERO ===== */
-.hero {
-  height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 20px;
-  animation:fadeIn 1.5s ease-in-out;
-}
-.hero img {
-  width:150px;height:150px;border-radius:50%;border:4px solid #00f5ff;margin-bottom:15px;box-shadow:0 0 30px #00f5ff;
-}
-.hero h2 {font-size:32px;font-weight:800;}
-.hero span {color:#00f5ff;}
-.hero p {margin-top:12px;opacity:0.8;max-width:500px;}
-.buttons a {
-  padding:12px 20px;border-radius:30px;text-decoration:none;font-weight:600;margin:5px;display:inline-block;transition:0.3s;font-size:14px;
-}
-.buttons .primary {background:linear-gradient(45deg,#00f5ff,#6366f1,#ec4899);color:white;}
-.buttons .secondary {border:2px solid #00f5ff;color:#00f5ff;background:transparent;}
-.buttons a:hover {transform:scale(1.1);}
-@media screen and (min-width:768px) {
-  .hero img {width:180px;height:180px;}
-  .hero h2 {font-size:40px;}
-  .buttons a {padding:12px 30px;font-size:16px;}
-}
-
-/* ===== SKILLS ===== */
-.skills {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:20px;padding:50px 5%;
-}
-.skill-card {
-  background:#1e293b;padding:20px;border-radius:15px;text-align:center;font-weight:600;font-size:16px;
-  opacity:0;transform:translateY(40px);transition:0.6s;
-}
-.skill-card.show {opacity:1;transform:translateY(0);}
-
-/* ===== PROJECTS ===== */
-.projects {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;padding:50px 5%;
-}
-.project-card {
-  background:#1e293b;padding:20px;border-radius:15px;display:flex;flex-direction:column;align-items:center;
-  box-shadow:0 0 10px #00f5ff;transition:0.4s;
-}
-.project-card:hover {transform:translateY(-10px);}
-.project-card img {
-  width:100%;max-height:180px;object-fit:cover;border-radius:10px;margin-bottom:10px;
-}
-.project-card h3 {color:#00f5ff;margin-bottom:10px;}
-.project-card p {opacity:0.8;margin-bottom:10px;}
-.project-card a, .project-card button {
-  padding:8px 16px;border-radius:20px;border:none;margin:5px;cursor:pointer;font-weight:bold;font-size:14px;
-}
-.project-card a {background:linear-gradient(45deg,#00f5ff,#6366f1,#ec4899);color:white;}
-.project-card button {background:#f87171;color:white;}
-
-/* ===== ADMIN PANEL ===== */
-#adminPanel {
-  display:none;max-width:500px;margin:50px auto;padding:30px;border-radius:15px;background:#1e293b;
-  box-shadow:0 0 30px #00f5ff;
-}
-#adminPanel h3 {color:#00f5ff;text-align:center;margin-bottom:20px;}
-#adminPanel input {
-  width:100%;padding:12px;margin:10px 0;border-radius:10px;border:none;background:#1a202c;color:white;
-}
-#adminPanel button {
-  width:100%;padding:12px;background:linear-gradient(45deg,#00f5ff,#6366f1,#ec4899);
-  color:white;border:none;border-radius:30px;font-weight:600;font-size:16px;margin-top:10px;
-}
-#adminPanel button:hover {transform:scale(1.05);}
-
-/* ===== FOOTER ===== */
-footer {text-align:center;padding:20px;color:#f8fafc;background:#0f172a;margin-top:50px;}
-
-/* ===== ANIMATION ===== */
-@keyframes fadeIn {0%{opacity:0;}100%{opacity:1;}}
-</style>
 </head>
+
 <body>
 
-<div class="bg-animation"></div>
-
 <nav>
-<h1>Jasim Developer</h1>
+
+<h1>M.Jasim Waheed</h1>
+
 <ul>
-<li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><button id="adminBtn">Admin Panel</button></li>
+<li><button id="adminBtn">Admin</button></li>
 </ul>
+
 </nav>
 
-<!-- HERO -->
-<section class="hero" id="about">
-<img src="image.png" alt="Profile">
+
+<section class="hero">
+
 <h2>Hello I'm <span>Jasim Khan</span></h2>
-<p>Full Stack Developer | WordPress Expert | UI/UX Designer | Fiverr Seller</p>
+
+<h3 id="typing"></h3>
+
 <div class="buttons">
-<a href="cv.pdf" download class="primary">Download CV</a>
-<a href="https://wa.me/923145216614" target="_blank" class="secondary">Hire Me</a>
+
+<a class="primary" href="#">Download CV</a>
+
+<a class="secondary" href="https://wa.me/923145216614">Hire Me</a>
+
 </div>
+
 </section>
 
-<!-- SKILLS -->
+
 <section id="skills">
-<h2 style="text-align:center;color:#00f5ff;margin-bottom:30px;">My Skills</h2>
+
+<h2 class="section-title">My Skills</h2>
+
 <div class="skills">
-<div class="skill-card">HTML</div>
-<div class="skill-card">CSS</div>
-<div class="skill-card">JavaScript</div>
-<div class="skill-card">WordPress</div>
-<div class="skill-card">SEO</div>
-<div class="skill-card">UI/UX Design</div>
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">WordPress</div>
+<div class="skill">SEO</div>
+<div class="skill">UI UX</div>
+
 </div>
+
 </section>
 
-<!-- PROJECTS -->
+
 <section id="projects">
-<h2 style="text-align:center;color:#00f5ff;margin-top:50px;">Projects</h2>
-<div class="projects" id="projectsContainer"></div>
+
+<h2 class="section-title">Projects</h2>
+
+<div id="projectsContainer" class="projects"></div>
+
 </section>
 
-<!-- ADMIN PANEL -->
+
 <section id="adminPanel">
-<h3>Admin Panel - Add Projects</h3>
-<input type="text" id="projectTitle" placeholder="Project Title">
-<input type="text" id="projectDesc" placeholder="Project Description">
-<input type="text" id="projectLink" placeholder="Project Link">
-<input type="text" id="projectImage" placeholder="Project Image URL">
+
+<h3>Add Project</h3>
+
+<input id="title" placeholder="Project title">
+
+<input id="desc" placeholder="Project description">
+
+<input id="link" placeholder="Project link">
+
 <button onclick="addProject()">Add Project</button>
+
 </section>
 
-<footer>© 2026 Jasim Khan | All Rights Reserved</footer>
 
-<script>
-// ===== GLOBAL VARIABLES =====
-const ADMIN_PASSWORD="jasim1234";
-let projects = JSON.parse(localStorage.getItem("projects")) || [];
-const projectsContainer = document.getElementById("projectsContainer");
+<footer>
 
-// ===== ADMIN PANEL TOGGLE =====
-document.getElementById("adminBtn").addEventListener("click",()=>{
-  const pass = prompt("Enter Admin Password:");
-  if(pass === ADMIN_PASSWORD){
-    const panel = document.getElementById("adminPanel");
-    panel.style.display = panel.style.display==="none"?"block":"none";
-    alert("Admin Access Granted ✅");
-  } else {
-    alert("Wrong Password ❌");
-  }
-});
+© 2026 Jasim Khan
 
-// ===== ADD PROJECT =====
-function addProject(){
-  const title = document.getElementById("projectTitle").value.trim();
-  const desc = document.getElementById("projectDesc").value.trim();
-  const link = document.getElementById("projectLink").value.trim();
-  const image = document.getElementById("projectImage").value.trim() || "https://via.placeholder.com/300";
+</footer>
 
-  if(!title || !desc || !link){
-    alert("Fill all fields!");
-    return;
-  }
 
-  const newProject = {id:Date.now(), title, desc, link, image};
-  projects.push(newProject);
-  localStorage.setItem("projects", JSON.stringify(projects));
-
-  renderProjects();
-
-  // Clear input fields
-  document.getElementById("projectTitle").value = "";
-  document.getElementById("projectDesc").value = "";
-  document.getElementById("projectLink").value = "";
-  document.getElementById("projectImage").value = "";
-
-  // Scroll to projects
-  document.getElementById("projects").scrollIntoView({behavior:"smooth"});
-
-  alert("Project Added 🚀");
-}
-
-// ===== RENDER PROJECTS =====
-function renderProjects(){
-  projectsContainer.innerHTML="";
-  projects.forEach(p=>{
-    const card = document.createElement("div");
-    card.className="project-card";
-    card.innerHTML = `
-      <img src="${p.image}" alt="${p.title}">
-      <h3>${p.title}</h3>
-      <p>${p.desc}</p>
-      <a href="${p.link}" target="_blank">View Project</a>
-      <button onclick="deleteProject(${p.id})">Delete</button>
-    `;
-    projectsContainer.appendChild(card);
-  });
-}
-
-// ===== DELETE PROJECT =====
-function deleteProject(id){
-  projects = projects.filter(p => p.id !== id);
-  localStorage.setItem("projects", JSON.stringify(projects));
-  renderProjects();
-}
-
-// ===== SKILL ANIMATION =====
-const skills=document.querySelectorAll(".skill-card");
-const observer=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting) entry.target.classList.add("show");
-  });
-});
-skills.forEach(skill=>observer.observe(skill));
-
-// ===== SMOOTH SCROLL =====
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
-  anchor.addEventListener("click",function(e){
-    e.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({behavior:"smooth"});
-  });
-});
-
-renderProjects();
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
